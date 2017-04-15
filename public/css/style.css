@@ -2,7 +2,6 @@
 
 
 
-
 body{
   margin: 0px;
   padding: 0px;
@@ -12,6 +11,9 @@ img {
   max-width: 100%;
 }
 
+ul{
+margin: 0;
+}
 
 
 /*
@@ -20,19 +22,33 @@ Header
 =================================
 */
 header {
-  margin-top: 14px;
-  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.header-wrapper {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
 }
 .donate-button {
-  background-color: #d0451b;
-  border: 1px solid #bc3315;
-  color: white;
+  /*background-color: #d0451b;*/
+  background-color: #fff;
+  border: 2px solid #bc3315;
+  color: #bc3315;
   padding: 15px 25px;
   text-align: center;
   text-decoration: none;
-  border-radius: 5px;
+  outline: none;
+  border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
+}
+.donate-button:hover {
+   background-color: #d0451b;
+   color: white;
+}
+.donate-button:active {
+   background-color: #bc3315;
 }
 #main-logo {
   margin-right: auto;
@@ -41,6 +57,28 @@ header {
   display: flex;
   align-items: flex-end;
   padding-bottom: 10px;
+}
+.donate-button i {
+  padding-right: 5px;
+  font-weight: bold;
+}
+@media screen and (max-width: 700px) {
+   #main-logo {
+       margin: 0 auto;
+    }
+}
+@media screen and (max-width: 700px) {
+   .donate-button {
+       margin: 0 auto;
+       width: 100%;
+       margin-top: 15px;
+    }
+}
+@media screen and (max-width: 700px) {
+   .header-wrapper {
+       flex-direction: column;
+
+    }
 }
 
 /*
@@ -52,27 +90,45 @@ nav {
   background-color: #5e995c;
 /*background-color: #5b866b;*/
 }
-.wrapper {
+.nav-wrapper {
   width: 80%;
   margin: 0 auto;
-  display: flex;
+
 }
 nav ul {
   display: flex;
   list-style: none;
   padding: 0px;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1000px) {
+   nav ul {
+       flex-direction: column;
+}
 }
 nav li{
-  padding-right: 25px;
   font-size: 25px;
   color: white;
   font-family: "Lato";
   font-weight: 300;
   letter-spacing: 1px;
+  padding: 15 0 15 0;
+}
+@media screen and (max-width: 1000px) {
+   nav li {
+       border-bottom: 1px solid #006d05;
+       text-align: center;
+       }
+}
+nav li:last-child {
+  border-bottom: none;
 }
 nav a {
   text-decoration: none;
   color: white;
+}
+nav a:hover {
+    color: #006d05;
 }
 
 /*
@@ -86,7 +142,7 @@ Main
       rgba(0, 0, 0, 0.2),
       rgba(0, 0, 0, 0.2)
     ),
-  url('img/pear.png');
+  url('../img/pear.png');
   background-repeat: no-repeat;
   background-size: cover;
   height: 600px;
@@ -140,7 +196,7 @@ Signup
 	text-align: center;
 	letter-spacing: 1px;
 }
-input[type=text] {
+input[type=email] {
     width: 50%;
     padding: 16px 20px;
     margin: 8px 8px;
@@ -182,6 +238,12 @@ Home About
   font-size: 26px;
   margin: 0px;
   font-family: "Lato";
+}
+@media screen and (max-width: 700px) {
+   .home-about p {
+       padding-left: 0px;
+       padding-right: 0px;
+    }
 }
 
 /*
@@ -241,6 +303,16 @@ footer li {
   color: white;
   font-size: 16px;
   font-family: "Lato";
+}
+.foot-col_1 p {
+  color: fff;
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 100;
+  margin-top: 0px;
+  text-align: center;
+
+
 }
 
 
